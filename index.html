@@ -275,10 +275,12 @@
           transmuxer.push(segment);
           transmuxer.flush();
         });
+        muxedName = this.files[0].name.replace('.ts', '.f4m');
       });
     });
 
 
+    /*
     torrentLink.addEventListener('change', function() {
 
       reader.addEventListener('loadend', function() {
@@ -349,6 +351,8 @@
       muxedName = this.files[0].name.replace('.ts', '.f4m');
       reader.readAsArrayBuffer(this.files[0]);
     }, false);
+  
+    */
 
 
     $('#combined-output').addEventListener('change', function () {
